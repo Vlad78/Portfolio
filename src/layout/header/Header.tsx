@@ -6,7 +6,7 @@ import LetsTalk from "../../components/Let'sTalk";
 const Header = () => {
   return (
     <StyledHeader>
-      <div>Vladislav Razvenkov</div>
+      <div>Vlad Razvenkov</div>
       <Menu />
       <LetsTalk />
     </StyledHeader>
