@@ -1,5 +1,5 @@
 import React from "react";
-import IconSet from "../../assets/images/icons-set.svg";
+import IconsSet from "../../assets/images/icons-set.svg";
 
 type Icon = {
   iconId: string;
@@ -11,13 +11,13 @@ type Icon = {
 const Icon: React.FC<Icon> = ({ iconId, height, width, viewBox }) => {
   return (
     <svg
-      width={width || "50"}
-      height={height || "50"}
-      viewBox={viewBox || "0 0 50 50"}
+      width={width || "100"}
+      height={height || "100"}
+      viewBox={viewBox || "0 0 100 100"}
       fill="none"
-      xmlns="https://www.w3.org/2000/svg"
+      xmlns="http://www.w3.org/2000/svg"
     >
-      <use xlinkHref={`${IconSet}#${iconId}`} />
+      <use xlinkHref={`${IconsSet}#${iconId}`} />
     </svg>
   );
 };
