@@ -1,19 +1,21 @@
 import React from "react";
 import styled from "styled-components";
 
-const Menu = () => {
+type Menu = {
+  items: string[];
+};
+
+const Menu: React.FC<Menu> = ({ items }) => {
   return (
     <StyledNav>
       <ul>
-        <li>
-          <a href="">Home</a>
-        </li>
-        <li>
-          <a href="">Skills</a>
-        </li>
-        <li>
-          <a href="">Projects</a>
-        </li>
+        {items.map((e, i) => {
+          return (
+            <li key={e + i}>
+              <a href="">{e}</a>
+            </li>
+          );
+        })}
       </ul>
     </StyledNav>
   );

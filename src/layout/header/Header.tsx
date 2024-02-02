@@ -4,10 +4,12 @@ import Menu from "../../components/Menu";
 import LetsTalk from "../../components/Let'sTalk";
 
 const Header = () => {
+  const navigationTitles = ["Home", "Skills", "Projects"];
+
   return (
     <StyledHeader>
       <div>Vlad Razvenkov</div>
-      <Menu />
+      <Menu items={navigationTitles} />
       <LetsTalk />
     </StyledHeader>
   );
