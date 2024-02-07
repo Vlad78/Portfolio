@@ -89,5 +89,5 @@ export const IconGradient: React.FC<Icon> = ({ height, width, viewBox, iconId })
       </svg>
     );
 
-  return <></>;
+  return <div>Icon is not found</div>;
 };
