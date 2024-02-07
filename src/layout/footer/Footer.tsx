@@ -9,8 +9,8 @@ const Footer = () => {
       <FlexWrapper align="center" justify="space-evenly">
         <div>©2022 All rights reserved.</div>
         <Icons>
-          <Icon iconId="linkedin" width="50px" height="50px" viewBox="0 0 260px 260px" />
-          <Icon iconId="telegram" width="50px" height="50px" viewBox="0 0 260px 260px" />
+          <Icon iconId="linkedin" width="50px" height="50px" />
+          <Icon iconId="telegram" width="50px" height="50px" />
         </Icons>
       </FlexWrapper>
     </StyledFooter>

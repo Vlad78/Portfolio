@@ -14,8 +14,9 @@ const Skills = () => {
         <Skill iconId="nodejs" />
         <Skill iconId="ts" />
         <Skill iconId="figma" />
-        <Skill iconId="indesign" />
-        <Skill iconId="photoshop" />
+        <Skill iconId="indesign-gradient" />
+        <Skill iconId="photoshop-gradient" />
+        <Skill iconId="illustrator-gradient" />
         <Skill iconId="docker" />
       </FlexWrapper>
     </StyledSkills>
