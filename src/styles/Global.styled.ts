@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
-*, *::before, *::after {
+ *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -14,7 +14,7 @@ body {
 }
 
 body {
-    font-family: "Lato", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    font-family: "Manrope", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
       'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
       sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -52,4 +52,7 @@ img {
     max-width: 100%;
     height: auto;
 }
+
+section:nth-of-type() {}
+
 `;

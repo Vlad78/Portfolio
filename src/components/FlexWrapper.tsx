@@ -7,9 +7,11 @@ type FlexWrapper = {
   align?: string;
   wrap?: "wrap" | "nowrap";
   gap?: string;
+  height?: string;
 };
 
 export const FlexWrapper = styled.div<FlexWrapper>`
+  min-height: ${(props) => props.height || ""};
   display: flex;
   gap: ${(props) => props.gap || ""};
   flex-direction: ${(props) => props.direction || "row"};

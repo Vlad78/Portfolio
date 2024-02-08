@@ -24,8 +24,16 @@ const Menu: React.FC<Menu> = ({ items }) => {
 export default Menu;
 
 const StyledNav = styled.nav`
+  margin: 0 15px;
+  flex-basis: 40%;
+
   ul {
     display: flex;
-    gap: 80px;
+    justify-content: end;
+
+    li {
+      flex-basis: 100px;
+      min-width: 80px;
+    }
   }
 `;
