@@ -1,11 +1,12 @@
 export const theme = {
   colors: {
-    primaryBg: "#ffffffd1",
+    primaryBg: "#ffffff",
+    primaryBgOp: "#ffffffd1",
     secondaryBg: "",
 
     accent: "",
 
     font: "#333333",
-    fontBG: "#F8F8F8",
+    fontBG: "#D5D5D5",
   },
 };

@@ -11,7 +11,7 @@ type FlexWrapper = {
 };
 
 export const FlexWrapper = styled.div<FlexWrapper>`
-  min-height: ${(props) => props.height || ""};
+  min-height: ${(props) => props.height || "100%"};
   display: flex;
   gap: ${(props) => props.gap || ""};
   flex-direction: ${(props) => props.direction || "row"};
