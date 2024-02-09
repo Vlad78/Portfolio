@@ -7,6 +7,6 @@ export const theme = {
     accent: "",
 
     font: "#333333",
-    fontBG: "#D5D5D5",
+    fontBG: "#f8f8f8",
   },
 };

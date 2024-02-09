@@ -8,11 +8,14 @@ type FlexWrapper = {
   wrap?: "wrap" | "nowrap";
   gap?: string;
   height?: string;
+  margin?: string;
 };
 
 export const FlexWrapper = styled.div<FlexWrapper>`
-  min-height: ${(props) => props.height || "100%"};
   display: flex;
+  position: relative;
+  margin: ${(props) => props.margin || ""};
+  min-height: ${(props) => props.height || "100%"};
   gap: ${(props) => props.gap || ""};
   flex-direction: ${(props) => props.direction || "row"};
   justify-content: ${(props) => props.justify || "flex-start"};

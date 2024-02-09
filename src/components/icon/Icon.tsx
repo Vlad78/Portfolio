@@ -22,7 +22,7 @@ const Icon: React.FC<Icon> = ({ iconId, height, width, viewBox }) => {
 
   return (
     <>
-      <svg width={width} height={height} viewBox={viewBox}>
+      <svg width={width} height={height} viewBox={viewBox || "0 0 16 16"}>
         <use xlinkHref={`${IconsSet}#${iconId}`} />
       </svg>
       {/* <div style={{ position: "absolute" }}>{new Date().getTime() - start}</div> */}

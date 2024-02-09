@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { theme } from "./Theme";
 
 export const GlobalStyle = createGlobalStyle`
  *, *::before, *::after {
@@ -11,6 +12,7 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  color: ${theme.colors.font}
 }
 
 body {
