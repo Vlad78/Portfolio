@@ -35,6 +35,7 @@ p {
 a {
     text-decoration: none;
     color: inherit;
+    cursor: pointer;
 
     &:hover {
         text-decoration: underline;
@@ -48,6 +49,7 @@ ul {
 button {
     background-color: none;
     border: none;
+    cursor: pointer;
 }
 
 img {

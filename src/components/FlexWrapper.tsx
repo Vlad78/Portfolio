@@ -9,6 +9,9 @@ type FlexWrapper = {
   gap?: string;
   height?: string;
   margin?: string;
+  position?: "relative" | "absolute";
+  inset?: string;
+  transform?: string;
 };
 
 export const FlexWrapper = styled.div<FlexWrapper>`
@@ -21,6 +24,9 @@ export const FlexWrapper = styled.div<FlexWrapper>`
   justify-content: ${(props) => props.justify || "flex-start"};
   align-items: ${(props) => props.align || "stretch"};
   flex-wrap: ${(props) => props.wrap || "nowrap"};
+  position: ${(props) => props.position};
+  inset: ${(props) => props.inset || "0 0 0 0"};
+  transform: ${(props) => props.transform};
 `;
 
 export default FlexWrapper;
