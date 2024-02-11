@@ -12,4 +12,6 @@ export const SectionTitleBG = styled.div`
   letter-spacing: -10px;
   text-transform: uppercase;
   user-select: none;
+  white-space: nowrap;
+  z-index: 0;
 `;
