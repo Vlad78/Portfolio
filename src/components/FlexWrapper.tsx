@@ -25,7 +25,7 @@ export const FlexWrapper = styled.div<FlexWrapper>`
   align-items: ${(props) => props.align || "stretch"};
   flex-wrap: ${(props) => props.wrap || "nowrap"};
   position: ${(props) => props.position};
-  inset: ${(props) => props.inset || "0 0 0 0"};
+  inset: ${(props) => props.inset || ""};
   transform: ${(props) => props.transform};
 `;
 

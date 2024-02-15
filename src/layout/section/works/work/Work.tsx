@@ -37,6 +37,7 @@ export default Work;
 const StyledWork = styled.div`
   flex-basis: 350px;
   min-width: 350px;
+  max-width: 400px;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -72,6 +73,7 @@ const ImageWrapper = styled.div<Omit<Work, "img" | "title">>`
 
 const Image = styled.img`
   object-fit: cover;
+  border-radius: 8px;
   flex-grow: 1;
 `;
 

@@ -8,35 +8,6 @@ import { theme } from "../../../styles/Theme";
 import { BGIllustration } from "../../../components/graphics/BGIllustration";
 
 const Main = () => {
-  const [tik, setTik] = useState({ dash: 0, color: 3238954 });
-  const requestId = useRef<number>(0);
-
-  let start = Date.now();
-  const generateFunction = () => {
-    let interval = Date.now() - start;
-    while (interval < 90) {
-      interval = Date.now() - start;
-    }
-    setTik((p) => ({ dash: p.dash + 1.5, color: p.color + 0.51 }));
-
-    start = Date.now();
-    requestId.current = requestAnimationFrame(generateFunction);
-  };
-
-  const decimalToHex = (decimal: number) => {
-    if (decimal % 1 !== 0) {
-      return decimal.toString(16).split(".")[0];
-    }
-    return decimal.toString(16);
-  };
-
-  useEffect(() => {
-    requestId.current = requestAnimationFrame(generateFunction);
-    return () => {
-      cancelAnimationFrame(requestId.current);
-    };
-  }, []);
-
   return (
     <StyledMain>
       <Container>
@@ -45,16 +16,15 @@ const Main = () => {
           inset="206px auto auto 149px"
           width="1300px"
           // stroke={theme.colors.font}
-          // stroke='#0a3d8f'
+          // stroke="#1a3d8f"
           // stroke='#6d0037'
           // stroke='#a91313'
           // stroke='#896c0a'
-          // stroke="#316c2a"
-          stroke={`#${decimalToHex(tik.color)}`}
+          stroke="#316c2a"
+          // stroke={`#${decimalToHex(tik.color)}`}
           strokeWidth="0.3px"
           strokeDasharray="180"
           strokeOpacity="0.4"
-          strokeDashoffset={440 + tik.dash + ""}
           transform="scale(1.5) scaleX(2.4) scaleY(1.1)"
           filter={`drop-shadow(2px 3px 8px ${theme.colors.font}) blur(0.3px)`}
           transition="1s linear"
@@ -76,12 +46,14 @@ const Main = () => {
 
 export default Main;
 
-const StyledMain = styled.div`
-  min-height: 80vh;
+const StyledMain = styled.main`
+  min-height: 70vh;
   display: flex;
 `;
 
 const StyledHero = styled.div`
+  white-space: break-spaces;
+
   h1 {
     margin: 10%;
     font-size: 2.7em;
