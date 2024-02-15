@@ -39,7 +39,12 @@ const Contact = () => {
           </StyledColumnWrapper>
           <StyledForm>
             <StyledInput as="input" name="email" placeholder="Email" />
-            <StyledInput as="textarea" name="message" placeholder="Message" />
+            <StyledInput
+              as="textarea"
+              name="message"
+              placeholder="Message"
+              defaultValue={"Hello!\nI have a job for you that I can offer. Check it out:\n"}
+            />
             <Button
               text="Submit"
               event={() => {
@@ -56,7 +61,7 @@ const Contact = () => {
 export default Contact;
 
 const StyledContact = styled.section`
-  min-height: 80vh;
+  min-height: 70vh;
 `;
 
 const StyledColumnWrapper = styled.div`
@@ -71,11 +76,15 @@ const StyledColumnWrapper = styled.div`
     padding: 0 7px;
     font-size: 1.2em;
     margin: 1.2em;
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    justify-content: stretch;
-    gap: 5%;
-    width: fit-content;
+    /* justify-content: flex-start; */
+    /* max-width: 100%; */
+    min-width: 180px;
+
+    *:nth-child(2) {
+      margin-left: 0.7em;
+    }
   }
   svg {
     height: 1em;
@@ -108,7 +117,7 @@ const StyledInput = styled.input<{ as?: string }>`
     css`
       padding: 10px;
       background-color: rgba(255, 255, 255, 0.4);
-      font-size: 1.6em;
+      font-size: 1.3em;
       outline: solid ${theme.colors.font} 1px;
       border-radius: 3px;
       border: none;
@@ -129,6 +138,6 @@ const StyledInput = styled.input<{ as?: string }>`
     props.as === "textarea" &&
     css`
       resize: none;
-      height: 190px;
+      height: 290px;
     `}
 `;

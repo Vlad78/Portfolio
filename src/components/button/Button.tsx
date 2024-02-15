@@ -30,6 +30,7 @@ const Button: React.FC<Button> = ({ text, disabled, event, url, ...args }) => {
 export default Button;
 
 export const StyledButton = styled.button<Omit<Button, "text">>`
+  font-family: Manrope, sans-serif;
   padding: 10px;
   margin: 5px;
   min-width: 90px;
