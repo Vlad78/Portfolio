@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import Menu from "../../components/Menu";
 import LetsTalk from "../../components/Let'sTalk";
@@ -12,7 +11,7 @@ const Header = () => {
   return (
     <StyledHeader>
       <Container>
-        <FlexWrapper justify="space-between" align="center" height="60px">
+        <FlexWrapper justify="space-between" align="center">
           <StyledName>Vlad Razvenkov</StyledName>
           <Menu items={navigationTitles} />
           <LetsTalk />
@@ -27,10 +26,13 @@ export default Header;
 const StyledHeader = styled.header`
   position: fixed;
   color: ${theme.colors.font};
-  background-color: ${theme.colors.primaryBg};
+  background-color: ${theme.colors.primaryBgOp};
   backdrop-filter: blur(10px);
   z-index: 10;
   inset: 0 0 auto 0;
+  display: flex;
+  min-height: 60px;
+  white-space: nowrap;
 `;
 
 const StyledName = styled.div`
