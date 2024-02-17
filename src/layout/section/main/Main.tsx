@@ -1,4 +1,3 @@
-import { useEffect, useRef, useState } from "react";
 import photo from "./../../../assets/images/me.webp";
 import styled from "styled-components";
 import { FlexWrapper } from "../../../components/FlexWrapper";
@@ -6,8 +5,11 @@ import LetsTalk from "../../../components/Let'sTalk";
 import { Container } from "../../../components/Container";
 import { theme } from "../../../styles/Theme";
 import { BGIllustration } from "../../../components/graphics/BGIllustration";
+import { font } from "../../../styles/Common";
 
-const Main = () => {
+export const Main = () => {
+  console.log("main");
+
   return (
     <StyledMain>
       <Container>
@@ -29,13 +31,13 @@ const Main = () => {
           filter={`drop-shadow(2px 3px 8px ${theme.colors.font}) blur(0.3px)`}
           transition="1s linear"
         />
-        <FlexWrapper align="center" justify="space-between">
+        <FlexWrapper align="center" justify="center" wrap="wrap" gap="40px">
           <StyledHero>
             <h1>
               Trusted <span>Partner</span> for Your Website <span>Development.</span>
             </h1>
             <p>I build fast, responsive, contemporary web-sites.</p>
-            <LetsTalk />
+            {/* <LetsTalk /> */}
           </StyledHero>
           <Photo src={photo} alt="portfolio-photo" />
         </FlexWrapper>
@@ -44,22 +46,26 @@ const Main = () => {
   );
 };
 
-export default Main;
-
 const StyledMain = styled.main`
+  margin-top: 60px;
   min-height: 70vh;
   display: flex;
 `;
 
 const StyledHero = styled.div`
   white-space: break-spaces;
+  flex-basis: 40%;
+  min-width: 320px;
+  flex-grow: 1;
 
   h1 {
     margin: 10%;
-    font-size: 2.7em;
     transform: scale(1.13, 1);
-    line-height: 1.7;
-    font-weight: 600;
+    ${font({
+      lineHeight: 1.7,
+      weight: 600,
+      size: { fmax: 43.2, fmin: 28 },
+    })}
   }
   span {
     color: ${theme.colors.primaryBg};
@@ -70,7 +76,10 @@ const StyledHero = styled.div`
   p {
     margin-left: 15%;
     margin-right: 10%;
-    font-size: 1.3em;
+    /* font-size: 1.3em; */
+    ${font({
+      size: { fmax: 24, fmin: 18 },
+    })}
   }
 `;
 
