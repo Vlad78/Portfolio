@@ -13,7 +13,7 @@ const Contact = () => {
     <StyledContact>
       <Container>
         <SectionTitleBG>Contact me</SectionTitleBG>
-        <FlexWrapper align="flex-start" justify="center" gap="50px" wrap="wrap">
+        <FlexWrapper align="flex-start" justify="center" gap="50px" wrap="wrap" position="relative">
           <StyledColumnWrapper>
             <SectionTitle>Contact me</SectionTitle>
             <Motto>
@@ -61,6 +61,7 @@ const Contact = () => {
 export default Contact;
 
 const StyledContact = styled.section`
+  position: relative;
   min-height: 70vh;
 `;
 

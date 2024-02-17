@@ -16,7 +16,6 @@ type FlexWrapper = {
 
 export const FlexWrapper = styled.div<FlexWrapper>`
   display: flex;
-  position: relative;
   margin: ${(props) => props.margin || ""};
   min-height: ${(props) => props.height || "100%"};
   gap: ${(props) => props.gap || ""};

@@ -10,6 +10,8 @@ import { BGIllustration } from "../../../components/graphics/BGIllustration";
 import { theme } from "../../../styles/Theme";
 
 const Works = () => {
+  console.log("projects");
+
   const navigationTitles = ["Landing Page", "E-commerce", "Other"];
 
   const projects = [
@@ -67,4 +69,5 @@ export default Works;
 
 const StyledWorks = styled.section`
   min-height: 80vh;
+  position: relative;
 `;

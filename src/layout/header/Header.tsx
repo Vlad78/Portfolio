@@ -5,7 +5,7 @@ import { Container } from "../../components/Container";
 import { FlexWrapper } from "../../components/FlexWrapper";
 import { theme } from "../../styles/Theme";
 
-const Header = () => {
+export const Header = () => {
   const navigationTitles = ["Home", "Skills", "Projects"];
 
   return (
@@ -14,14 +14,12 @@ const Header = () => {
         <FlexWrapper justify="space-between" align="center">
           <StyledName>Vlad Razvenkov</StyledName>
           <Menu items={navigationTitles} />
-          <LetsTalk />
+          {/* <LetsTalk /> */}
         </FlexWrapper>
       </Container>
     </StyledHeader>
   );
 };
-
-export default Header;
 
 const StyledHeader = styled.header`
   position: fixed;

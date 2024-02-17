@@ -48,7 +48,8 @@ const Skills = () => {
 export default Skills;
 
 const StyledSkills = styled.section`
-  margin-top: 5vh;
+  /* margin-top: 5vh; */
+  position: relative;
   min-height: 50vh;
   background-color: ${theme.colors.primaryBg};
 `;
