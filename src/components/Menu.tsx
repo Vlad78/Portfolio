@@ -49,7 +49,7 @@ const StyledNav = styled.nav<{ isOpen: boolean }>`
     inset: 0 0 0 0;
     background-color: ${theme.colors.primaryBg};
     min-height: 100vh;
-    min-width: 100vw;
+    margin: unset;
     z-index: 100;
 
     ul {

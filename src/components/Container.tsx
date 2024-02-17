@@ -8,4 +8,5 @@ export const Container = styled.div`
   margin: 0 auto;
   /* outline: 1px solid; */
   overflow-x: clip;
+  position: relative;
 `;
