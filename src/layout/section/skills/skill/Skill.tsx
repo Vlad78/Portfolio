@@ -18,22 +18,10 @@ export const Skill: React.FC<Skill> = (props) => {
 };
 
 const StyledSkill = styled.div<Omit<Skill, "iconId">>`
-  flex-basis: 100px;
+  flex-basis: 80px;
+  flex-grow: 1;
   min-width: 80px;
   display: flex;
   justify-content: center;
   filter: ${(props) => props.filter || ""};
-
-  position: relative;
-  ::after {
-    content: "";
-    width: 85px;
-    height: 85px;
-    position: absolute;
-    background-color: beige;
-    inset: 50% 0 0 50%;
-    transform: rotate(45deg) translate(-50%, -50%);
-    transform-origin: left top;
-    z-index: -1;
-  }
 `;

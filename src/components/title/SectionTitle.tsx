@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const SectionTitle = styled.h2`
-  margin-top: 20vh;
+  margin-top: 15vh;
   text-transform: uppercase;
   text-align: center;
   font-size: 2em;
