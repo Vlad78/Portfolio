@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import SectionTitle from "../../../components/title/SectionTitle";
-import Work from "./work/Work";
+import { Work } from "./work/Work";
 import project1 from "./../../../assets/images/projects/Wake Up.webp";
 import project2 from "./../../../assets/images/projects/b2402d9fca8f5d17933b707e646be8c8.png";
 import { FlexWrapper } from "../../../components/FlexWrapper";
@@ -9,9 +9,7 @@ import { MenuWorks } from "../../../components/MenuWorks";
 import { BGIllustration } from "../../../components/graphics/BGIllustration";
 import { theme } from "../../../styles/Theme";
 
-const Works = () => {
-  console.log("projects");
-
+export const Works = () => {
   const navigationTitles = ["Landing Page", "E-commerce", "Other"];
 
   const projects = [
@@ -33,7 +31,8 @@ const Works = () => {
         <SectionTitle>My Projects</SectionTitle>
         <BGIllustration
           iconId="type2-turquoiseStripes"
-          inset="85px auto auto 1px"
+          // inset="85px auto auto 1px"
+          inset="91px auto auto 127px"
           width="1300px"
           // stroke={theme.colors.font}
           // stroke='#0a3d8f'
@@ -49,7 +48,7 @@ const Works = () => {
           transition="1s linear"
         />
         <MenuWorks items={navigationTitles} />
-        <FlexWrapper gap="5%" justify="space-around" wrap="wrap">
+        <FlexWrapper gap="5%" justify="space-around" wrap="wrap" margin="0 0 5vh 0">
           {projects.map((e) => (
             <Work
               img={e.img}
@@ -64,8 +63,6 @@ const Works = () => {
     </StyledWorks>
   );
 };
-
-export default Works;
 
 const StyledWorks = styled.section`
   min-height: 80vh;

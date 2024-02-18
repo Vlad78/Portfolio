@@ -10,7 +10,7 @@ type Button = {
   disabled?: boolean;
 };
 
-const Button: React.FC<Button> = ({ text, disabled, event, url, ...args }) => {
+export const Button: React.FC<Button> = ({ text, disabled, event, url, ...args }) => {
   const eventHandler = (e: React.SyntheticEvent) => {
     e.preventDefault();
     if (event) {
@@ -26,8 +26,6 @@ const Button: React.FC<Button> = ({ text, disabled, event, url, ...args }) => {
     </StyledButton>
   );
 };
-
-export default Button;
 
 export const StyledButton = styled.button<Omit<Button, "text">>`
   font-family: Manrope, sans-serif;

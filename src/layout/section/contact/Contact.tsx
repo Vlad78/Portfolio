@@ -6,7 +6,7 @@ import { Container } from "../../../components/Container";
 import { SectionTitleBG } from "../../../components/title/SectionTitleBG";
 import Icon from "../../../components/icon/Icon";
 import { theme } from "../../../styles/Theme";
-import Button from "../../../components/button/Button";
+import { Button } from "../../../components/button/Button";
 
 const Contact = () => {
   return (

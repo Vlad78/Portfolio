@@ -30,7 +30,6 @@ export const MenuWorks: React.FC<MenuWorks> = ({ items }) => {
 };
 
 const StyledNav = styled.nav`
-  margin: 45px 15px 30px;
   font-weight: 900;
 
   ul {
@@ -38,13 +37,19 @@ const StyledNav = styled.nav`
     justify-content: center;
     text-align: center;
     gap: 5%;
+    margin: 45px 15px 30px;
+    flex-wrap: wrap;
 
     li {
+      /* flex-basis: 40px; */
       min-width: 40px;
+      white-space: nowrap;
     }
   }
 
   a {
+    display: inline-block;
+    margin: 5px 0;
     padding: 5px 9px;
     color: ${theme.colors.font};
     background-color: ${theme.colors.primaryBg};

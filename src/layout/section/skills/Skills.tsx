@@ -10,7 +10,7 @@ import { Majors } from "./major/Majors";
 // prettier-ignore
 const skills = ['react','nextjs','nodejs',"ts","docker","figma","indesign-gradient","photoshop-gradient","illustrator-gradient"]
 
-const Skills = () => {
+export const Skills = () => {
   return (
     <StyledSkills>
       <Container>
@@ -33,8 +33,6 @@ const Skills = () => {
     </StyledSkills>
   );
 };
-
-export default Skills;
 
 const StyledSkills = styled.section`
   min-height: 50vh;
