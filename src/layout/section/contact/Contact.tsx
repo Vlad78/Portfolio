@@ -1,4 +1,3 @@
-import React from "react";
 import styled, { css } from "styled-components";
 import SectionTitle from "../../../components/title/SectionTitle";
 import { FlexWrapper } from "../../../components/FlexWrapper";
@@ -8,12 +7,19 @@ import Icon from "../../../components/icon/Icon";
 import { theme } from "../../../styles/Theme";
 import { Button } from "../../../components/button/Button";
 
-const Contact = () => {
+export const Contact = () => {
   return (
     <StyledContact>
       <Container>
         <SectionTitleBG>Contact me</SectionTitleBG>
-        <FlexWrapper align="flex-start" justify="center" gap="50px" wrap="wrap" position="relative">
+        <FlexWrapper
+          align="flex-start"
+          justify="center"
+          gap="50px"
+          wrap="wrap"
+          position="relative"
+          margin="15vh 0 0 0"
+        >
           <StyledColumnWrapper>
             <SectionTitle>Contact me</SectionTitle>
             <Motto>
@@ -43,7 +49,7 @@ const Contact = () => {
               as="textarea"
               name="message"
               placeholder="Message"
-              defaultValue={"Hello!\nI have a job for you that I can offer. Check it out:\n"}
+              defaultValue={"Hello!\nI have a job for you!\nCheck it out:\n"}
             />
             <Button
               text="Submit"
@@ -58,11 +64,13 @@ const Contact = () => {
   );
 };
 
-export default Contact;
-
 const StyledContact = styled.section`
   position: relative;
   min-height: 70vh;
+
+  ${SectionTitle} {
+    margin-top: 0;
+  }
 `;
 
 const StyledColumnWrapper = styled.div`
@@ -86,6 +94,10 @@ const StyledColumnWrapper = styled.div`
     *:nth-child(2) {
       margin-left: 0.7em;
     }
+
+    @media ${theme.media.tablet} {
+      margin: 0.4em;
+    }
   }
   svg {
     height: 1em;
@@ -98,7 +110,7 @@ const Motto = styled.p`
 `;
 
 const StyledForm = styled.form`
-  margin-top: 10vh;
+  /* margin-top: 15vh; */
   flex-basis: 40%;
   min-width: 300px;
   max-width: 400px;
@@ -117,7 +129,7 @@ const StyledInput = styled.input<{ as?: string }>`
     (props.as === "input" || props.as === "textarea") &&
     css`
       padding: 10px;
-      background-color: rgba(255, 255, 255, 0.4);
+      background-color: rgba(255, 255, 255, 0.7);
       font-size: 1.3em;
       outline: solid ${theme.colors.font} 1px;
       border-radius: 3px;

@@ -15,7 +15,7 @@ export const SectionTitleBG = styled.div`
   text-transform: uppercase;
   user-select: none;
   white-space: nowrap;
-  z-index: 0;
+  z-index: -2;
 
   @media ${theme.media.tablet} {
     margin-top: calc(4% + 20px);
