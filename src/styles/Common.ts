@@ -16,7 +16,7 @@ export const font = ({ family, weight, color, lineHeight, size }: Font) => `
     font-weight: ${weight || "400"};
     color: ${color || theme.colors.font};
     line-height: ${lineHeight || "1.2"};
-    font-size: calc( (100vw - 480px)/(1210 - 480) * (${size?.fmax} - ${size?.fmin}) + ${
+    font-size: calc( (min(100vw, 1210px) - 480px)/(1210 - 480) * (${size?.fmax} - ${
   size?.fmin
-}px);
+}) + ${size?.fmin}px);
     `;
