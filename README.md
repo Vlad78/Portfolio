@@ -2,6 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Completed web-page: [https://portfolio-weld-mu-82.vercel.app](https://portfolio-weld-mu-82.vercel.app)
+
 ## Available Scripts
 
 In the project directory, you can run:

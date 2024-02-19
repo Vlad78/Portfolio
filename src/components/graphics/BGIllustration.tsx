@@ -52,12 +52,12 @@ export const BGIllustration: FC<BGIllustration> = (props) => {
     requestId.current = requestAnimationFrame(generateFunction);
   };
 
-  // useEffect(() => {
-  //   requestId.current = requestAnimationFrame(generateFunction);
-  //   return () => {
-  //     cancelAnimationFrame(requestId.current);
-  //   };
-  // }, []);
+  useEffect(() => {
+    requestId.current = requestAnimationFrame(generateFunction);
+    return () => {
+      cancelAnimationFrame(requestId.current);
+    };
+  }, []);
 
   return (
     <StyledBGIllustration inset={props.inset} transform={props.transform} filter={props.filter}>
