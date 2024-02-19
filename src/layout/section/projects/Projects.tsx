@@ -30,9 +30,9 @@ export const Works: FC = () => {
       <Container>
         <StyledSectionTitle>My Projects</StyledSectionTitle>
         <BGIllustration
-          iconId="type2-turquoiseStripes"
-          inset="91px auto auto 127px"
-          width="1300px"
+          iconId="type2-turquoiseStripes-trimmed"
+          inset="91px auto auto 1px"
+          width="777px"
           transform="scale(1.5) scaleX(1.4) scaleY(1.8)"
           // stroke='#0a3d8f'
           // stroke='#6d0037'

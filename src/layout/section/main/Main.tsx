@@ -10,10 +10,21 @@ export const Main: FC = () => {
   return (
     <S.Main id="Home">
       <Container>
-        <BGIllustration
+        {/* <BGIllustration
           iconId="type2-whiteStripes"
           inset="206px auto auto 149px"
           width="1300px"
+          transform="scale(1.5) scaleX(2.4) scaleY(1.1)"
+          // stroke="#1a3d8f"
+          stroke="#6d0037"
+          // stroke="#a91313"
+          // stroke='#896c0a'
+          // stroke="#316c2a"
+        /> */}
+        <BGIllustration
+          iconId="type2-whiteStripes-trimmed"
+          inset="206px auto auto 345px"
+          width="485px"
           transform="scale(1.5) scaleX(2.4) scaleY(1.1)"
           // stroke="#1a3d8f"
           // stroke='#6d0037'
