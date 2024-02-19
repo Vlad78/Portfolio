@@ -1,35 +1,7 @@
-import React from "react";
 import styled, { css } from "styled-components";
-import { theme } from "../styles/Theme";
+import { theme } from "../../../styles/Theme";
 
-type Menu = {
-  items: string[];
-};
-
-const Menu: React.FC<Menu> = ({ items }) => {
-  return (
-    <>
-      <StyledNav isOpen={false}>
-        <ul>
-          {items.map((e, i) => {
-            return (
-              <li key={e + i}>
-                <a href="">{e}</a>
-              </li>
-            );
-          })}
-        </ul>
-      </StyledNav>
-      <Burger isOpen={false}>
-        <span></span>
-      </Burger>
-    </>
-  );
-};
-
-export default Menu;
-
-const StyledNav = styled.nav<{ isOpen: boolean }>`
+const Nav = styled.nav<{ isOpen: boolean }>`
   margin: 0 15px;
   flex-basis: 40%;
 
@@ -121,3 +93,8 @@ const Burger = styled.button<{ isOpen: boolean }>`
     }
   }
 `;
+
+export const S = {
+  Nav,
+  Burger,
+};

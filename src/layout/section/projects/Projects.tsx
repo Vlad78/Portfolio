@@ -1,15 +1,15 @@
+import { FC } from "react";
 import styled from "styled-components";
-import SectionTitle from "../../../components/title/SectionTitle";
-import { Work } from "./work/Work";
+import { StyledSectionTitle } from "../../../components/title/SectionTitle";
+import { Project } from "./project/Project";
 import project1 from "./../../../assets/images/projects/Wake Up.webp";
 import project2 from "./../../../assets/images/projects/b2402d9fca8f5d17933b707e646be8c8.png";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Container } from "../../../components/Container";
-import { MenuWorks } from "../../../components/MenuWorks";
+import { MenuProjects } from "./menu/MenuProjects";
 import { BGIllustration } from "../../../components/graphics/BGIllustration";
-import { theme } from "../../../styles/Theme";
 
-export const Works = () => {
+export const Works: FC = () => {
   const navigationTitles = ["Landing Page", "E-commerce", "Other"];
 
   const projects = [
@@ -26,31 +26,24 @@ export const Works = () => {
   ];
 
   return (
-    <StyledWorks>
+    <StyledWorks id="Projects">
       <Container>
-        <SectionTitle>My Projects</SectionTitle>
+        <StyledSectionTitle>My Projects</StyledSectionTitle>
         <BGIllustration
           iconId="type2-turquoiseStripes"
-          // inset="85px auto auto 1px"
           inset="91px auto auto 127px"
           width="1300px"
-          // stroke={theme.colors.font}
+          transform="scale(1.5) scaleX(1.4) scaleY(1.8)"
           // stroke='#0a3d8f'
           // stroke='#6d0037'
           // stroke='#a91313'
           stroke="#896c0a"
           // stroke="#316c2a"
-          strokeWidth="0.3px"
-          strokeDasharray="180"
-          strokeOpacity="0.4"
-          transform="scale(1.5) scaleX(1.4) scaleY(1.8)"
-          filter={`drop-shadow(2px 3px 8px ${theme.colors.font}) blur(0.3px)`}
-          transition="1s linear"
         />
-        <MenuWorks items={navigationTitles} />
+        <MenuProjects items={navigationTitles} />
         <FlexWrapper gap="5%" justify="space-around" wrap="wrap" margin="0 0 5vh 0">
           {projects.map((e) => (
-            <Work
+            <Project
               img={e.img}
               title={e.title}
               deployUrl={e?.url}

@@ -1,4 +1,4 @@
-import React from "react";
+import { FC } from "react";
 import styled from "styled-components";
 import { theme } from "../../styles/Theme";
 
@@ -10,7 +10,7 @@ type Button = {
   disabled?: boolean;
 };
 
-export const Button: React.FC<Button> = ({ text, disabled, event, url, ...args }) => {
+export const Button: FC<Button> = ({ text, disabled, event, url, ...args }) => {
   const eventHandler = (e: React.SyntheticEvent) => {
     e.preventDefault();
     if (event) {

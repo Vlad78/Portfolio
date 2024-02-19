@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { theme } from "../../styles/Theme";
 import { font } from "../../styles/Common";
 
-export const SectionTitleBG = styled.div`
+export const StyledSectionTitleBG = styled.div`
   position: absolute;
   inset: -8% 0 auto 4%;
   ${font({

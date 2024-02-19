@@ -1,10 +1,9 @@
 import styled from "styled-components";
 import { FlexWrapper } from "../../../components/FlexWrapper";
-import SectionTitle from "../../../components/title/SectionTitle";
+import { StyledSectionTitle } from "../../../components/title/SectionTitle";
 import { Skill } from "./skill/Skill";
 import { Container } from "../../../components/Container";
-import { SectionTitleBG } from "../../../components/title/SectionTitleBG";
-import { Major } from "./major/Major";
+import { StyledSectionTitleBG } from "../../../components/title/SectionTitleBG";
 import { Majors } from "./major/Majors";
 
 // prettier-ignore
@@ -12,10 +11,10 @@ const skills = ['react','nextjs','nodejs',"ts","docker","figma","indesign-gradie
 
 export const Skills = () => {
   return (
-    <StyledSkills>
+    <StyledSkills id="Skills">
       <Container>
-        <SectionTitle>SKILLS</SectionTitle>
-        <SectionTitleBG>SKILLS</SectionTitleBG>
+        <StyledSectionTitle>SKILLS</StyledSectionTitle>
+        <StyledSectionTitleBG>SKILLS</StyledSectionTitleBG>
         <Majors />
         <FlexWrapper
           gap="20px"

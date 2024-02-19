@@ -1,42 +1,22 @@
-import styled from "styled-components";
-import Menu from "../../components/Menu";
+import { Menu } from "./menu/HeaderMenu";
 import LetsTalk from "../../components/Let'sTalk";
 import { Container } from "../../components/Container";
 import { FlexWrapper } from "../../components/FlexWrapper";
-import { theme } from "../../styles/Theme";
+import { FC } from "react";
+import { S } from "./Header_Styles";
 
-export const Header = () => {
+export const Header: FC = () => {
   const navigationTitles = ["Home", "Skills", "Projects"];
 
   return (
-    <StyledHeader>
+    <S.Header>
       <Container>
         <FlexWrapper justify="space-between" align="center">
-          <StyledName>Vlad Razvenkov</StyledName>
+          <S.LogoName>Vlad Razvenkov</S.LogoName>
           <Menu items={navigationTitles} />
           {/* <LetsTalk /> */}
         </FlexWrapper>
       </Container>
-    </StyledHeader>
+    </S.Header>
   );
 };
-
-const StyledHeader = styled.header`
-  position: fixed;
-  color: ${theme.colors.font};
-  background-color: ${theme.colors.primaryBgOp};
-  backdrop-filter: blur(10px);
-  z-index: 10;
-  inset: 0 0 auto 0;
-  display: flex;
-  min-height: 60px;
-  white-space: nowrap;
-`;
-
-const StyledName = styled.div`
-  font-size: 1.5em;
-  font-weight: 900;
-  letter-spacing: -0.5px;
-  margin-right: auto;
-  text-align: center;
-`;

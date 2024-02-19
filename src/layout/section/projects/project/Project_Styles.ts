@@ -1,39 +1,10 @@
-import React from "react";
 import styled, { css } from "styled-components";
-import { Button, StyledButton } from "../../../../components/button/Button";
-import { FlexWrapper } from "../../../../components/FlexWrapper";
+import { ProjectType } from "./Project_Types";
+import { StyledButton } from "../../../../components/button/Button";
 import { theme } from "../../../../styles/Theme";
+import { FlexWrapper } from "../../../../components/FlexWrapper";
 
-type Work = {
-  img: string;
-  title: string;
-  text?: string;
-  gitHubUrl?: string;
-  deployUrl?: string;
-};
-
-export const Work: React.FC<Work> = ({ img, title, deployUrl, gitHubUrl }) => {
-  return (
-    <StyledWork>
-      <ImageWrapper deployUrl={deployUrl} gitHubUrl={gitHubUrl}>
-        <Image src={img} />
-        <FlexWrapper
-          justify="space-evenly"
-          align="center"
-          position="absolute"
-          inset="50% 0 auto 0"
-          transform="translate(0, -50%)"
-        >
-          {deployUrl && <Button text="Project" url={deployUrl} />}
-          {gitHubUrl && <Button text="Code" url={gitHubUrl} />}
-        </FlexWrapper>
-      </ImageWrapper>
-      {/* <Title>{title}</Title> */}
-    </StyledWork>
-  );
-};
-
-const StyledWork = styled.div`
+const Work = styled.div`
   flex-basis: 351px;
   min-width: 300px;
   max-width: 440px;
@@ -44,7 +15,7 @@ const StyledWork = styled.div`
   margin-bottom: 40px;
 `;
 
-const ImageWrapper = styled.div<Omit<Work, "img" | "title">>`
+const ImageWrapper = styled.div<Omit<ProjectType, "img" | "title">>`
   display: flex;
   flex-grow: 1;
   position: relative;
@@ -109,3 +80,10 @@ const Title = styled.h3`
   font-size: 1em;
   font-weight: 900;
 `;
+
+export const S = {
+  Image,
+  Title,
+  ImageWrapper,
+  Work,
+};

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const SectionTitle = styled.h2`
+export const StyledSectionTitle = styled.h2`
   margin-top: 15vh;
   text-transform: uppercase;
   text-align: center;
@@ -9,5 +9,3 @@ const SectionTitle = styled.h2`
   transform: scale(1.12, 1);
   letter-spacing: -1.5px;
 `;
-
-export default SectionTitle;
