@@ -16,29 +16,6 @@ const ColumnWrapper = styled.div`
   min-width: 300px;
   display: flex;
   flex-direction: column;
-
-  li {
-    background-color: #ffffff;
-    border-radius: 6px;
-    padding: 0 7px;
-    font-size: 1.2em;
-    margin: 1.2em;
-    display: inline-flex;
-    align-items: center;
-    min-width: 180px;
-
-    *:nth-child(2) {
-      margin-left: 0.7em;
-    }
-
-    @media ${theme.media.tablet} {
-      margin: 0.4em;
-    }
-  }
-  svg {
-    height: 1em;
-    flex-shrink: 0;
-  }
 `;
 
 const Motto = styled.p`
