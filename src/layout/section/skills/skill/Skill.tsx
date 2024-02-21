@@ -18,8 +18,6 @@ export const Skill: React.FC<Skill> = (props) => {
 };
 
 const StyledSkill = styled.div<Omit<Skill, "iconId">>`
-  flex-basis: 80px;
-  flex-grow: 1;
   min-width: 80px;
   display: flex;
   justify-content: center;
