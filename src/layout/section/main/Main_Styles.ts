@@ -11,7 +11,7 @@ const Main = styled.main`
 const Hero = styled.div`
   white-space: break-spaces;
   flex-basis: 40%;
-  min-width: 320px;
+  min-width: 370px;
   flex-grow: 1;
 
   h1 {
@@ -38,13 +38,30 @@ const Hero = styled.div`
   }
 `;
 
+const PhotoBlock = styled.div`
+  display: grid;
+  place-items: center;
+  background-color: rgba(255, 255, 255, 0.39);
+  border-radius: 8px;
+  flex-basis: 34%;
+  margin-right: 2%;
+  min-width: 230px;
+  min-height: 270px;
+
+  @media ${theme.media.tablet} {
+    display: none;
+  }
+`;
+
 const Photo = styled.img`
-  width: 300px;
-  height: 400px;
   object-fit: cover;
+  max-width: 95%;
+  max-height: 80%;
+  filter: contrast(1.1);
 `;
 
 export const S = {
+  PhotoBlock,
   Photo,
   Hero,
   Main,

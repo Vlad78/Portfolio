@@ -1,4 +1,4 @@
-import photo from "./../../../assets/images/me.webp";
+import photo from "./../../../assets/images/me7.webp";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import LetsTalk from "../../../components/Let'sTalk";
 import { Container } from "../../../components/Container";
@@ -17,7 +17,7 @@ export const Main: FC = () => {
           transform="scale(1.5) scaleX(2.4) scaleY(1.1)"
           stroke="#316c2a"
         /> */}
-        <BGIllustration iconId="type3-main" inset="0 0 0 -60px" />
+        <BGIllustration iconId="type3-main" inset="40px 0 0 -60px" />
         <FlexWrapper align="center" justify="center" wrap="wrap" gap="40px">
           <S.Hero>
             <h1>
@@ -26,7 +26,9 @@ export const Main: FC = () => {
             <p>I build fast, responsive, contemporary web-sites.</p>
             {/* <LetsTalk /> */}
           </S.Hero>
-          <S.Photo src={photo} alt="portfolio-photo" />
+          <S.PhotoBlock>
+            <S.Photo src={photo} alt="portfolio-photo" />
+          </S.PhotoBlock>
         </FlexWrapper>
       </Container>
     </S.Main>
