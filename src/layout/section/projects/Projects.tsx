@@ -7,7 +7,7 @@ import project2 from "./../../../assets/images/projects/b2402d9fca8f5d17933b707e
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Container } from "../../../components/Container";
 import { MenuProjects } from "./menu/MenuProjects";
-import { BGIllustration } from "../../../components/graphics/BGIllustration";
+import { BGIllustration } from "../../../components/graphics/BGIllustration-new";
 
 export const Works: FC = () => {
   const navigationTitles = ["Landing Page", "E-commerce", "Other"];
@@ -29,17 +29,14 @@ export const Works: FC = () => {
     <StyledWorks id="Projects">
       <Container>
         <StyledSectionTitle>My Projects</StyledSectionTitle>
-        <BGIllustration
+        {/* <BGIllustration
           iconId="type2-turquoiseStripes-trimmed"
           inset="91px auto auto 1px"
           width="777px"
           transform="scale(1.5) scaleX(1.4) scaleY(1.8)"
-          // stroke='#0a3d8f'
-          // stroke='#6d0037'
-          // stroke='#a91313'
           stroke="#896c0a"
-          // stroke="#316c2a"
-        />
+        /> */}
+        <BGIllustration iconId="type3-projects" inset="-100px 0 0 -150px" />
         <MenuProjects items={navigationTitles} />
         <FlexWrapper gap="5%" justify="space-around" wrap="wrap" margin="0 0 5vh 0">
           {projects.map((e) => (

@@ -21,43 +21,53 @@ type BGIllustration = {
   transition?: string;
 };
 
-const hexToDecimal = (hex: string | undefined) => {
-  hex && console.log(parseInt(hex.slice(1), 16));
-  return hex ? parseInt(hex.slice(1), 16) : 3238954;
-};
-
-const decimalToHex = (decimal: number) => {
-  if (decimal % 1 !== 0) {
-    return decimal.toString(16).split(".")[0];
-  }
-  return decimal.toString(16);
-};
+// const extractNumberFromHwb = (hwbString: string): number => {
+//   const numberPattern = /\d+/g;
+//   const numbers = hwbString.match(numberPattern);
+//   console.log(numbers && numbers[0]);
+//   return numbers ? parseInt(numbers[0]) : 0;
+// };
 
 export const BGIllustration: FC<BGIllustration> = (props) => {
-  const [tik, setTik] = useState({ dash: 0, color: hexToDecimal(props.stroke) });
+  // const [tick, setTick] = useState({
+  //   color1: extractNumberFromHwb("hwb(89 47% 0% / 1)"),
+  //   color2: extractNumberFromHwb("hwb(161 77% 0% / 1)"),
+  //   color3: extractNumberFromHwb("hwb(77 23% 0% / 0.8)"),
+  // });
+  const [tick, setTick] = useState({
+    color1: 89,
+    color2: 161,
+    color3: 77,
+  });
 
-  console.log("tik:", tik);
+  // console.log("tick:", tick);
 
   const requestId = useRef<number>(0);
   const start = useRef(Date.now());
 
-  const generateFunction = (time: number) => {
-    let interval = Date.now() - start.current;
-    while (interval < 90) {
-      interval = Date.now() - start.current;
+  const generateFrame = () => {
+    const currentTime = Date.now();
+    const elapsedTime = currentTime - start.current;
+
+    if (elapsedTime < 100) {
+      setTimeout(generateFrame, 100 - elapsedTime);
+      return;
     }
-    setTik((p) => ({ dash: p.dash + 1.5, color: p.color + 0.51 }));
+
+    // console.log(elapsedTime);
+
+    setTick((p) => ({ color1: p.color1 + 0.6, color2: p.color2 + 1, color3: p.color3 + 0.6 }));
 
     start.current = Date.now();
-    requestId.current = requestAnimationFrame(generateFunction);
+    requestId.current = requestAnimationFrame(generateFrame);
   };
 
-  // useEffect(() => {
-  //   requestId.current = requestAnimationFrame(generateFunction);
-  //   return () => {
-  //     cancelAnimationFrame(requestId.current);
-  //   };
-  // }, []);
+  useEffect(() => {
+    requestId.current = requestAnimationFrame(generateFrame);
+    return () => {
+      cancelAnimationFrame(requestId.current);
+    };
+  }, []);
 
   return (
     <StyledBGIllustration inset={props.inset} transform={props.transform} filter={props.filter}>
@@ -67,12 +77,10 @@ export const BGIllustration: FC<BGIllustration> = (props) => {
         height={props.height}
         viewBox={props.viewBox}
         fill={props.fill}
-        stroke={`#${decimalToHex(tik.color)}`}
-        strokeWidth={props.strokeWidth || "0.3px"}
-        strokeOpacity={props.strokeOpacity || "0.4"}
-        strokeDasharray={props.strokeDasharray || "180"}
-        strokeDashoffset={440 + tik.dash + ""}
-        transition={props.transition || "1s linear"}
+        fill1={`hwb(${tick.color1} 47% 0% / 1)`}
+        fill2={`hwb(${tick.color2} 77% 0% / 1)`}
+        fill3={`hwb(${tick.color3} 23% 0% / 0.8)`}
+        // transition={props.transition || "1s linear"}
         filter={props.filter}
       />
     </StyledBGIllustration>

@@ -2,7 +2,7 @@ import photo from "./../../../assets/images/me.webp";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import LetsTalk from "../../../components/Let'sTalk";
 import { Container } from "../../../components/Container";
-import { BGIllustration } from "../../../components/graphics/BGIllustration";
+import { BGIllustration } from "../../../components/graphics/BGIllustration-new";
 import { FC } from "react";
 import { S } from "./Main_Styles";
 
@@ -11,27 +11,13 @@ export const Main: FC = () => {
     <S.Main id="Home">
       <Container>
         {/* <BGIllustration
-          iconId="type2-whiteStripes"
-          inset="206px auto auto 149px"
-          width="1300px"
-          transform="scale(1.5) scaleX(2.4) scaleY(1.1)"
-          // stroke="#1a3d8f"
-          stroke="#6d0037"
-          // stroke="#a91313"
-          // stroke='#896c0a'
-          // stroke="#316c2a"
-        /> */}
-        <BGIllustration
           iconId="type2-whiteStripes-trimmed"
           inset="206px auto auto 345px"
           width="485px"
           transform="scale(1.5) scaleX(2.4) scaleY(1.1)"
-          // stroke="#1a3d8f"
-          // stroke='#6d0037'
-          // stroke='#a91313'
-          // stroke='#896c0a'
           stroke="#316c2a"
-        />
+        /> */}
+        <BGIllustration iconId="type3-main" inset="0 0 0 -60px" />
         <FlexWrapper align="center" justify="center" wrap="wrap" gap="40px">
           <S.Hero>
             <h1>
