@@ -57,7 +57,7 @@ const Photo = styled.img`
   object-fit: cover;
   max-width: 95%;
   max-height: 80%;
-  filter: contrast(1.1);
+  filter: contrast(1.1) saturate(0.7);
 `;
 
 export const S = {

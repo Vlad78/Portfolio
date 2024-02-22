@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import { S } from "./HeaderMenu_Styles";
 
 type Menu = {
@@ -6,9 +6,11 @@ type Menu = {
 };
 
 export const Menu: FC<Menu> = ({ items }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <>
-      <S.Nav isOpen={false}>
+      <S.Nav isOpen={isOpen} onClick={(e) => setIsOpen(false)}>
         <ul>
           {items.map((e, i) => {
             return (
@@ -19,7 +21,7 @@ export const Menu: FC<Menu> = ({ items }) => {
           })}
         </ul>
       </S.Nav>
-      <S.Burger isOpen={false}>
+      <S.Burger isOpen={isOpen} onClick={(e) => setIsOpen((p) => !p)}>
         <span></span>
       </S.Burger>
     </>
