@@ -3,12 +3,14 @@ import { S } from "./MenuProjects_Styles";
 
 type MenuProjects = {
   items: string[];
+  handleOptionsToggle: (e: EventTarget & Element) => void;
 };
 
-export const MenuProjects: FC<MenuProjects> = ({ items }) => {
+export const MenuProjects: FC<MenuProjects> = ({ items, handleOptionsToggle }) => {
   const clickHandler = (e: SyntheticEvent) => {
     e.preventDefault();
     e.currentTarget.classList.toggle("isActive");
+    handleOptionsToggle(e.currentTarget);
   };
 
   return (

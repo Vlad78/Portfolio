@@ -20,12 +20,14 @@ const MenuProjects = styled.nav`
 
   a {
     display: inline-block;
-    margin: 5px 0;
+    margin: 5px;
     padding: 5px 9px;
     color: ${theme.colors.font};
+    transform: scale(1.13, 1);
     background-color: ${theme.colors.primaryBg};
     border: 1px solid ${theme.colors.font};
     border-radius: 6px;
+    user-select: none;
 
     &.isActive {
       color: ${theme.colors.primaryBg};
